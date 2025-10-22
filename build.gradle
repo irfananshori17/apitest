@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'pusingpala'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.11.0'
+    testImplementation 'org.testng:testng:7.10.2'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.12'
+
+}
+
+test {
+    useTestNG()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
